@@ -1,0 +1,427 @@
+/*Index page stuff */
+
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  background-color: #333;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.section-info h1 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  animation: slideUp 0.8s;
+}
+
+#about .section-info h1 {
+  font-size: 24px;
+  max-width: 800px;
+  margin-top: -300px;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 4;
+}
+
+.section-info p {
+  max-width: 800px;
+  margin-top: 20;
+  text-align: center;
+  font-family: "museomoderno", sans-serif;
+  font-style: bolder;
+  font-size: 22px;
+  line-height: 1.5;
+  animation: slideInLeft 1s;
+}
+
+.section-info p.about-description {
+  margin-top: 40px;
+  font-size: 22px;
+  animation: slideIn 1s;
+  line-height: 1.5;
+}
+
+/* Header Stuff */
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: -1px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  align-content: center;
+}
+
+/* Footer Stuff */
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+html,
+body,
+.wrapper,
+section {
+  height: 100%;
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+  background-color: #333;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+#about {
+  background-image: url("images/about.jpg");
+}
+
+#current-state {
+  background-image: url("images/CurrentState.jpg");
+}
+
+#historical-background {
+  background-image: url("images/HistoryofAI.jpg");
+}
+
+#future-of-ai {
+  background-image: url("images/FutureofAI.png");
+}
+
+#future-of-ai {
+  background-image: url("images/FutureofAI.png");
+}
+
+#ai-in-cybersecurity {
+  background-image: url("images/AIApplications.jpeg");
+}
+
+#experiences {
+  background-image: url("images/experiences.jpg");
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #999, #666);
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.learn-more-btn:hover {
+  outline: 2px solid #999;
+}
+
+#current-state .section-info {
+  position: relative;
+  text-align: center;
+}
+
+#current-state .learn-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Historical Background */
+#historical-background .section-info {
+  text-align: center;
+  display: inline-block;
+  margin-left: -600px;
+  margin-top: -450px;
+}
+
+#historical-background .learn-more-btn {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+/* Future of AI */
+#future-of-ai .section-info {
+  text-align: center;
+  display: inline-block;
+  margin-left: -400px;
+  margin-top: 0px;
+}
+
+#future-of-ai .learn-more-btn {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+/* AI in Cybersecurity */
+#ai-in-cybersecurity .section-info {
+  text-align: center;
+  display: inline-block;
+  margin-left: 800px;
+  margin-top: -300px;
+}
+
+#ai-in-cybersecurity .learn-more-btn {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+/* User Experiences */
+#experiences .section-info {
+  text-align: center;
+  display: inline-block;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+#experiences .learn-more-btn {
+  display: inline-block;
+  margin-left: 0px;
+}
+
+/* Create Account */
+#create-account .section-info {
+  text-align: center;
+  display: inline-block;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+#create-account .learn-more-btn {
+  display: inline-block;
+}
+
+/* Animations */
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(0.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-500px) scale(0.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Login/Signup stuff */
+.form-container {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-family: "Orbitron", sans-serif;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.link-button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+button:hover,
+.link-button:hover {
+  background-color: #0056b3;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Profile Page stuff */
+.profile-container {
+  background-color: #f8f9fa;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h2 {
+  margin-bottom: 20px;
+}
+
+/* Quiz button stuff */
+.quiz-button {
+  background-color: #007bff;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: large;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.quiz-button:hover {
+  background-color: #0056b3;
+}
+
+/* Leaderboard stuff */
+.data-table {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.data-table th,
+.data-table td {
+  border: 0.1px solid #000000;
+  padding: 5px;
+  text-align: center;
+}
+
+.data-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+/*Bullet point stuff */
+
+.cons strong {
+  color: red;
+}
+
+.pros strong {
+  color: green;
+}
